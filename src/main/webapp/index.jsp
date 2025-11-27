@@ -4,28 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hệ thống Quản lý</title>
+    <title>Management System</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="header">
+        <div class="header-content">
+            <h1>Management System</h1>
+            <p>Select a function to get started</p>
+        </div>
+    </div>
+    
     <div class="container">
-        <h1>Hệ thống Quản lý</h1>
-        <p style="text-align: center; margin-bottom: 30px;">Vui lòng chọn chức năng:</p>
-        
-        <ul class="menu-list">
-            <li class="menu-item">
-                <a href="sqlGateway">
-                    <span class="menu-icon">📁</span>
-                    <span>The SQL Gateway (Chạy câu lệnh SQL)</span>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="emailList">
-                    <span class="menu-icon">✉️</span>
-                    <span>Join Email List (Đăng ký nhận tin)</span>
-                </a>
-            </li>
-        </ul>
+        <div class="menu-grid">
+            <a href="sqlGateway" class="menu-card">
+                <span class="menu-icon">⚡</span>
+                <h3>SQL Gateway</h3>
+                <p>Execute SQL statements and view query results</p>
+            </a>
+            
+            <a href="emailList" class="menu-card">
+                <span class="menu-icon">📧</span>
+                <h3>Email Subscription</h3>
+                <p>Subscribe to receive the latest information and updates via email</p>
+            </a>
+        </div>
     </div>
 </body>
 </html>

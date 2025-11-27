@@ -4,36 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join our email list</title>
+    <title>Email Subscription</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="header">
+        <div class="header-content">
+            <h1>Email Subscription</h1>
+            <p>Subscribe to receive the latest information and updates</p>
+        </div>
+    </div>
+    
     <div class="container">
-        <h2>Join our email list</h2>
-        <p>To join our email list, enter your name and email address below.</p>
-        <p style="color: #888; font-style: italic;">TODO write content</p>
-        
-        <form action="emailList" method="post">
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+        <div class="content-card">
+            <p style="text-align: center; margin-bottom: 30px;">
+                Please fill in your information in the form below to subscribe to our email list.
+            </p>
             
-            <div class="form-group">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
-            </div>
+            <form action="emailList" method="post">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <button type="submit">Subscribe Now</button>
+                </div>
+            </form>
             
-            <div class="form-group">
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
+            <div class="return-button">
+                <a href="index.jsp" class="back-link">← Back to Home</a>
             </div>
-            
-            <button type="submit">Join Now</button>
-        </form>
-        
-        <div style="margin-top: 20px; text-align: center;">
-            <a href="index.jsp" style="color: #87ceeb; text-decoration: none;">← Quay lại trang chủ</a>
         </div>
     </div>
 </body>

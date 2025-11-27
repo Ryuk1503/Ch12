@@ -5,97 +5,148 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #e0e0e0;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    padding: 0;
+}
+
+.header {
+    background: rgba(26, 26, 46, 0.95);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.header h1 {
+    color: #64ffda;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header p {
+    color: #b0bec5;
+    margin-top: 8px;
+    font-size: 14px;
 }
 
 .container {
-    background-color: #2d2d2d;
-    border: 1px solid #444;
-    border-radius: 8px;
-    padding: 40px;
-    max-width: 600px;
-    width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
 }
 
 h1 {
     text-align: center;
-    color: #ffffff;
+    color: #64ffda;
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 32px;
+    font-weight: 600;
 }
 
 h2 {
     text-align: center;
-    color: #87ceeb;
-    margin-bottom: 20px;
-    font-size: 24px;
+    color: #64ffda;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
 }
 
 p {
-    color: #cccccc;
+    color: #b0bec5;
     margin-bottom: 15px;
     line-height: 1.6;
 }
 
-.menu-list {
-    list-style: none;
-    margin-top: 30px;
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.menu-item {
-    margin-bottom: 20px;
-}
-
-.menu-item a {
-    display: flex;
-    align-items: center;
-    color: #ffffff;
+.menu-card {
+    background: rgba(30, 30, 50, 0.8);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    cursor: pointer;
     text-decoration: none;
-    padding: 15px;
-    background-color: #3a3a3a;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    color: inherit;
+    display: block;
 }
 
-.menu-item a:hover {
-    background-color: #4a4a4a;
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
+    border-color: rgba(100, 255, 218, 0.6);
 }
 
 .menu-icon {
-    margin-right: 15px;
-    font-size: 24px;
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.menu-card h3 {
+    color: #64ffda;
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.menu-card p {
+    color: #b0bec5;
+    font-size: 14px;
+    margin: 0;
 }
 
 .form-group {
     margin-bottom: 20px;
 }
 
+.content-card {
+    background: rgba(30, 30, 50, 0.8);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
 label {
     display: block;
     margin-bottom: 8px;
-    color: #ffffff;
-    font-weight: bold;
+    color: #e0e0e0;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 12px;
-    background-color: #1a1a1a;
-    border: 1px solid #444;
-    border-radius: 4px;
-    color: #ffffff;
+    padding: 12px 16px;
+    background-color: rgba(26, 26, 46, 0.6);
+    border: 2px solid rgba(100, 255, 218, 0.3);
+    border-radius: 8px;
+    color: #e0e0e0;
     font-size: 14px;
-    font-family: 'Courier New', monospace;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s;
 }
 
 textarea {
@@ -107,33 +158,47 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     outline: none;
-    border-color: #87ceeb;
+    border-color: #64ffda;
+    background-color: rgba(26, 26, 46, 0.8);
+}
+
+textarea {
+    font-family: 'Courier New', monospace;
 }
 
 button {
-    background-color: #0066cc;
-    color: #ffffff;
-    padding: 12px 30px;
+    background: linear-gradient(135deg, #64ffda 0%, #00bcd4 100%);
+    color: #1a1a2e;
+    padding: 14px 40px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.4);
 }
 
 button:hover {
-    background-color: #0052a3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(100, 255, 218, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
 }
 
 .result-area {
     margin-top: 20px;
-    padding: 15px;
-    background-color: #1a1a1a;
-    border: 1px solid #444;
-    border-radius: 4px;
+    padding: 20px;
+    background-color: rgba(26, 26, 46, 0.6);
+    border: 2px solid rgba(100, 255, 218, 0.3);
+    border-radius: 8px;
     min-height: 100px;
-    color: #cccccc;
+    color: #e0e0e0;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .info-list {
@@ -142,18 +207,40 @@ button:hover {
 }
 
 .info-list li {
-    margin-bottom: 10px;
-    color: #ffffff;
-    padding: 8px 0;
-    border-bottom: 1px solid #444;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+    font-size: 16px;
 }
 
 .info-list li:last-child {
     border-bottom: none;
 }
 
+.info-list li strong {
+    color: #64ffda;
+    margin-right: 10px;
+}
+
 .return-button {
     margin-top: 30px;
     text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    color: #64ffda;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #64ffda;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.back-link:hover {
+    background-color: #64ffda;
+    color: #1a1a2e;
 }
 
